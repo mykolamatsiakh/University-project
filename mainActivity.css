@@ -1,0 +1,48 @@
+html {
+  background-image: url("/home/mykola/web_university/drawable/nulp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.dropbtn1 {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 7cm;
+    padding: 16px;
+    font-size: 16px;
+    width:150px;
+    height:40px;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn2 {
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 0cm;
+    padding: 16px;
+    font-size: 16px;
+    width:150px;
+    height:40px;
+    border: none;
+    cursor: pointer;
+}
+div {
+  background-color:#4CAF50;
+  height: 50px;
+}
+
+h1 {
+  margin-top:1cm;
+  color: white;
+  text-align: center;
+  font-size:50px;
+}
+h3 {
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  font-size:25px;
+}
