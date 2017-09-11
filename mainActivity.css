@@ -1,5 +1,6 @@
 html {
-  background-image: url("/home/mykola/web_university/drawable/nulp.jpg");
+/*  background-image: url("/home/mykola/web_university/drawable/nulp.jpg");*/
+  background-color:#EEEEEE;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,30 +8,40 @@ html {
 }
 
 .dropbtn1 {
-    background-color: #4CAF50;
+    background-color: #00C853;
     color: white;
-    margin-left: 7cm;
+    margin-left: 5cm;
+    margin-top: 0cm;
     padding: 16px;
     font-size: 16px;
     width:150px;
-    height:40px;
+    height:50px;
     border: none;
     cursor: pointer;
 }
+img {
+  margin-top: 0cm;
+  margin-left: 0.5cm;
+  width:80px;
+  vertical-align:center;
+  height:80px;
+  border:none;
+}
 .dropbtn2 {
-    background-color: #4CAF50;
+    background-color: #00C853;
     color: white;
     margin-left: 0cm;
+    margin-top: 0cm;
     padding: 16px;
     font-size: 16px;
     width:150px;
-    height:40px;
+    height:50px;
     border: none;
     cursor: pointer;
 }
 div {
-  background-color:#4CAF50;
-  height: 50px;
+  background-color:#00C853;
+  height: 80px;
 }
 
 h1 {
@@ -39,10 +50,16 @@ h1 {
   text-align: center;
   font-size:50px;
 }
+
 h3 {
   color: white;
   text-align: center;
-  top: 50%;
-  left: 50%;
   font-size:25px;
+}
+
+h4{
+  margin-top:0.5cm;
+  height:150px;
+  font-weight: normal;
+  font-size:20px;
 }
