@@ -18,6 +18,10 @@ html {
     border: none;
     cursor: pointer;
 }
+
+.dropbtn1:hover {
+    background-color: #01c151;
+}
 img {
   margin-top: 0cm;
   margin-left: 0.5cm;
@@ -39,6 +43,13 @@ img {
     border: none;
     cursor: pointer;
 }
+
+.dropbtn2:hover {
+    background-color: #01c151;
+
+
+}
+
 div {
   background-color:#00C853;
   height: 100px;
