@@ -6,13 +6,21 @@
   <title>IoT program</title>
 </head>
 <body>
-  <div>
-    <button class="dropbtn1" style="margin-left:180px"><span>Головна</span></button>
-    <a href = "newsActivity.html"><button class="dropbtn1"><span>Новини</span></button></a>
-    <button class="dropbtn1"><span>Cтудентам</span></button>
-    <button class="dropbtn1"><span>Відгуки</span></button>
-    <button class="dropbtn1"><span>Контакти</span></button>
-    <button class="dropbtn1"><span>Admin</span></button>
+  <div class="nav">
+    <label for="toggle">&#9776;</label>
+    <input type="checkbox" id="toggle"/>
+    <div class="menu">
+      <div class="dropdown">
+<a href="mainActivity.html"><button class="dropbtn1"><span>Головна</span></button></a>
+  <a href = "newsActivity.html"><button class="dropbtn1"><span>Новини</span></button></a>
+  <button class="dropbtn2"><span>Cтудентам</span></button>
+  <div class="dropdown-content">
+    <a href="studyPlan.html"><span>Навчальний план</span></a>
+  </div>
+  <a href="feedback.html"><button class="dropbtn1"><span>Відгуки</span></button>
+  <button class="dropbtn1"><span>Контакти</span></button>
+  <a href = "admin.html"><button class="dropbtn1"><span>Admin</span></button></a>
+    </div>
 </div>
 <div class="newsSection">
   <section class="newsArticle">

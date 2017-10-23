@@ -11,17 +11,25 @@
     <label for="toggle">&#9776;</label>
     <input type="checkbox" id="toggle"/>
     <div class="menu">
-  <button class="dropbtn1"><span>Головна</span></button>
+      <div class="dropdown">
+<a href="mainActivity.html"><button class="dropbtn1"><span>Головна</span></button></a>
   <a href = "newsActivity.html"><button class="dropbtn1"><span>Новини</span></button></a>
-  <button class="dropbtn1"><span>Cтудентам</span></button>
-  <button class="dropbtn1"><span>Відгуки</span></button>
+  <button class="dropbtn2"><span>Cтудентам</span></button>
+    <div class="dropdown-content">
+    <a href="studyPlan.html"><span>Навчальний план</span></a>
+  </div>
+  <a href="feedback.html"><button class="dropbtn1"><span>Відгуки</span></button>
   <button class="dropbtn1"><span>Контакти</span></button>
   <a href = "admin.html"><button class="dropbtn1"><span>Admin</span></button></a>
+</div>
    </div>
 <span class="content-title" style="background-color:#ffffff;color:#00C853;">Додати новину</span>
   <form class="content-item">
-    <input type="text"  class="title" placeholder="Заголовок"></input><br><br>
-    <input type="submit" class="title" value="Опублікувати">
+    <input type="text" rows="1" cols="50" class="title" placeholder="Заголовок"></input><br>
+    <textarea rows="4" cols="50" class="smallDescription" placeholder="Короткий опис"></textarea><br>
+    <textarea rows="10" cols="50"class="smallDescription" placeholder="Довгий опис"></textarea><br>
+    <button class="dropbtn1" style="width:200px;">Додати зображення</button><br>
+    <input type="submit" style="width:200px;" class="dropbtn1" value="Опублікувати">
   </form>
 </body>
 </html>
