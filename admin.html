@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html manifest="manifest.cache" lang="en">
 <head>
   <meta charset="utf-8">
   <title>IoT program</title>
   <link rel = "stylesheet" type="text/css" href="admin.css"/>
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <script src="admin.js"></script>
 </head>
 <body>
   <div class="nav">
@@ -12,10 +13,10 @@
     <input type="checkbox" id="toggle"/>
     <div class="menu">
       <div class="dropdown">
-<a href="mainActivity.html"><button class="dropbtn1"><span>Головна</span></button></a>
-  <a href = "newsActivity.html"><button class="dropbtn1"><span>Новини</span></button></a>
-  <button class="dropbtn2"><span>Cтудентам</span></button>
-    <div class="dropdown-content">
+        <a href="mainActivity.html"><button class="dropbtn1"><span>Головна</span></button></a>
+        <a href = "newsActivity.html"><button class="dropbtn1"><span>Новини</span></button></a>
+        <button class="dropbtn2"><span>Cтудентам</span></button>
+        <div class="dropdown-content">
     <a href="studyPlan.html"><span>Навчальний план</span></a>
   </div>
   <a href="feedback.html"><button class="dropbtn1"><span>Відгуки</span></button>
@@ -24,12 +25,18 @@
 </div>
    </div>
 <span class="content-title" style="background-color:#ffffff;color:#00C853;">Додати новину</span>
-  <form class="content-item">
-    <input type="text" rows="1" cols="50" class="title" placeholder="Заголовок"></input><br>
-    <textarea rows="4" cols="50" class="smallDescription" placeholder="Короткий опис"></textarea><br>
-    <textarea rows="10" cols="50"class="smallDescription" placeholder="Довгий опис"></textarea><br>
-    <button class="dropbtn1" style="width:200px;">Додати зображення</button><br>
-    <input type="submit" style="width:200px;" class="dropbtn1" value="Опублікувати">
+<div style="margin-left:50px;">
+  <form name="myForm" style="width:300px; margin-left:30%;">
+    <textarea id="title" type="text" rows="1" cols="50" style="float:left;" class="title" placeholder="Заголовок" required></textarea><br>
+    <textarea id="short_description" rows="4" cols="50" class="smallDescription" placeholder="Короткий опис" required></textarea><br>
+    <textarea id="long_desription" rows="10" cols="50"class="smallDescription" placeholder="Довгий опис" required></textarea><br>
+    <button class="dropbtn1" onclick="document.getElementById('fileUpload').click()">Додати зображення</button>
+    <input type="file" id="fileUpload" name="files" style="display:none" />
+    <input type="submit" style="width:200px;" onclick="validateForm()" class="dropbtn1" style="display:none" value="Опублікувати">
   </form>
+</div>
+<div>
+<img id="added-photo" style="float:left; margin-top:5px; width:300px; height:300px;"/>
+</div>
 </body>
 </html>
