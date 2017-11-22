@@ -1,3 +1,27 @@
+function isOnline() {
+    return window.navigator.onLine;
+}
+
+window.addEventListener('load', function() {
+
+  function updateOnlineStatus(event) {
+
+    var condition = navigator.onLine ? "online" : "offline";
+    if( condition == 'online' ){
+
+    }else{
+        alert("Зникло інтернет з'єднання'")
+    }
+
+  }
+
+  window.addEventListener('online',  updateOnlineStatus(event) );
+  window.addEventListener('offline', updateOnlineStatus(event) );
+
+});
+
+var i = 0;
+
 function validateForm() {
   var title, smrtdesc, lngdesc;
   title = document.getElementById("title");
@@ -6,14 +30,26 @@ function validateForm() {
   if (title.value == ""||smrtdesc.value == ""||long_description.value == "") {
         alert("Ви не заповнили всі поля");
     }
-    else alert("Новина успішно надіслана");
+  else if (isOnline()) {
+    localStorage.setItem('titel', title.value);
+    var titul = localStorage.getItem('titel');
+    news_title = document.getElementById("titleInNews");
+    news_description = document.getElementById("longDescInNews");
+    document.getElementById('titleInNews').innerHTML = title.value;
+  }
+   else {
+     localStorage.title = title.value;
+     localStorage.smallDescription = smrtdesc.value;
+     localStorage.long_description = long_description.value;
+   }
+
 }
+
 function addFeedback(){
   var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
-
 if(dd<10) {
     dd = '0'+dd
 }
@@ -21,22 +57,31 @@ if(dd<10) {
 if(mm<10) {
     mm = '0'+mm
 }
-
 today = mm + '/' + dd + '/' + yyyy;
   var text, newdiv, input;
   input = document.getElementById("input");
   linebreak = document.createElement("br");
     text = document.getElementById("input");
     newdiv = document.getElementById("newDivs");
+    var a ='&nbsp &nbsp &nbsp &nbsp &nbsp';
+    localStorage.text = text.value;
+    localStorage.today = today + linebreak;
     if(input.value == ""){
       alert("Ви не заповнили поле відгуку");
- }
+    }
+    else if(isOnline()){
+     newdiv.append(text.value+today);
+     newdiv.appendChild(linebreak);
+   }
  else {
-   newdiv.append(text.value+"      "+today);
-   newdiv.appendChild(linebreak);
+   localStorage.text = text.value;
+   localStorage.today = today + linebreak;
+    alert("Не має інтернету!");
  }
 
 }
+
+
 
 // function showImage(src, target) {
 //     var fr = new FileReader();
